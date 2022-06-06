@@ -2,7 +2,9 @@
   "main": "src/server.ts",
   "private": true,
   "scripts": {
-    "dev": "ts-node-dev -r dotenv/config --respawn --transpile-only --ignore-watch node_modules src/server.ts"
+    "dev": "ts-node-dev -r dotenv/config --respawn --transpile-only --ignore-watch node_modules src/server.ts",
+    "prettier:ts": "yarn prettier --write src/**/*.ts",
+    "prettier:pug": "yarn prettier --write src/**/*.pug"
   },
   "license": "CC0-1.0",
   "dependencies": {
@@ -10,6 +12,7 @@
     "pug": "^3.0.2"
   },
   "devDependencies": {
+    "@prettier/plugin-pug": "^2.1.0",
     "@types/node": "^17.0.31",
     "@typescript-eslint/eslint-plugin": "^5.22.0",
     "@typescript-eslint/parser": "^5.22.0",

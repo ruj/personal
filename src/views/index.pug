@@ -5,9 +5,9 @@ block content
     div(class="w-2/6")
       div.mx-10.mt-20
         div.space-y-5
-          h1(class="text-8xl font-bold tracking-[-0.08em]") NxxTp0pyN
+          h1.text-8xl.font-bold(class="tracking-[-0.08em]") NxxTp0pyN
           h2.text-lg.font-semibold.uppercase Sleeping
-        div(class="mt-96 px 2xl:px-36 space-y-16")
+        div.mt-96.px.space-y-16(class="2xl:px-36")
           -
             const items = [
               {
@@ -31,16 +31,10 @@ block content
             div.pb-2.space-y-3.border-b.uppercase
               div.space-y-0
                 span #{item.title}<br />
-                span(
-                  class="text-[0.7rem] text-zinc-400/75 tracking-wider"
-                )
-                  = item.altTitle
+                span.tracking-wider(class="text-[0.7rem] text-zinc-400/75")= item.altTitle
               div.flex.justify-between.font-medium
-                span #{item.content.title}
-                a(
-                  class="text-red-600 hover:text-red-500 select"
-                  href=item.content.url
-                ) Link
+                span= item.content.title
+                a.text-red-600.select(class="hover:text-red-500" href=item.content.url) Link
         div.mt-80.uppercase
           p Places where anyone can find me
           p.line-through Sample Text
@@ -74,7 +68,6 @@ block content
               )
             span= formattedDate
     div
-      div(class="w-4/6 min-h-screen fixed")
+      div.min-h-screen.fixed(class="w-4/6")
         div.h-screen.flex.justify-center.items-center
           span.text-5xl.font-black.opacity-5.uppercase Disclose Here!
-

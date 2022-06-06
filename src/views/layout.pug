@@ -2,28 +2,35 @@ doctype html
 html(lang="en")
   head
     meta(charset="UTF-8")
-    meta(http-equiv="X-UA-Compatible", content="IE=edge")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    )
+    meta(
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    )
 
     title #{title}
 
-    link(href="css/style.css" rel="stylesheet" type="text/css")
-    link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet")
+    link(
+      href="css/style.css"
+      rel="stylesheet"
+      type="text/css"
+    )
+    link(
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      rel="stylesheet"
+    )
     // link(href="css/tailwind.css" rel="stylesheet" type="text/css")
 
     script(src="https://cdn.tailwindcss.com")
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js")
+    script(
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    )
   body.text-white.font-sans.bg-zinc-900.select-none
     block content
     script.
-      $(document).keydown(
-        (event) =>
-          (event.keyCode == 123 ||
-            (event.ctrlKey && event.shiftKey && event.keyCode == 73) ||
-            (event.ctrlKey && event.shiftKey && event.keyCode == 74) ||
-            (event.ctrlKey && event.shiftKey && event.keyCode == 67) ||
-            (event.ctrlKey && event.keyCode == 85)) &&
-          false
-      )
+      $(document).keydown((event) => (event.keyCode == 123 || (event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74) || (event.ctrlKey && event.shiftKey && event.keyCode == 67) || (event.ctrlKey && event.keyCode == 85)) && false);
 
-      $(document).on('contextmenu', (event) => event.preventDefault())
+      $(document).on("contextmenu", (event) => event.preventDefault());
