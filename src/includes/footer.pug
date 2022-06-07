@@ -1,0 +1,32 @@
+div.mt-80.uppercase
+  p Places where anyone can find me
+  p.line-through Sample Text
+  div.mt-10.text-center.text-3xl.space-x-2
+    -
+      const icons = [
+        {
+          name: 'steam',
+          url: 'https://steamcommunity.com/profiles/76561198174413245'
+        },
+        {
+          name: 'twitter',
+          url: 'https://twitter.com/asan_syn'
+        }
+      ]
+    each icon in icons
+      a(class="hover:text-zinc-300" href=icon.url)
+        i(class=`fa-brands fa-${icon.name}`)
+  div.mt-24.pb-16
+    -
+      const date = new Date()
+      const formattedDate = date.toLocaleString(
+        'ru-RU',
+        {
+          year: 'numeric',
+          month: 'numeric',
+          day: 'numeric',
+          hour: '2-digit',
+          minute: '2-digit'
+        }
+      )
+    span= formattedDate

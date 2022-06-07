@@ -4,9 +4,7 @@ block content
   div.h-screen.flex
     div(class="w-2/6")
       div.mx-10.mt-20
-        div.space-y-5
-          h1.text-8xl.font-bold(class="tracking-[-0.08em]") NxxTp0pyN
-          h2.text-lg.font-semibold.uppercase Sleeping
+        include ../includes/header.pug
         div.mt-96.px.space-y-16(class="2xl:px-36")
           -
             const items = [
@@ -35,38 +33,7 @@ block content
               div.flex.justify-between.font-medium
                 span= item.content.title
                 a.text-red-600.select(class="hover:text-red-500" href=item.content.url) Link
-        div.mt-80.uppercase
-          p Places where anyone can find me
-          p.line-through Sample Text
-          div.mt-10.text-center.text-3xl.space-x-2
-            -
-              const icons = [
-                {
-                  name: 'steam',
-                  url: 'https://steamcommunity.com/profiles/76561198174413245'
-                },
-                {
-                  name: 'twitter',
-                  url: 'https://twitter.com/asan_syn'
-                }
-              ]
-            each icon in icons
-              a(class="hover:text-zinc-300" href=icon.url)
-                i(class=`fa-brands fa-${icon.name}`)
-          div.mt-24.pb-16
-            -
-              const date = new Date()
-              const formattedDate = date.toLocaleString(
-                'ru-RU',
-                {
-                  year: 'numeric',
-                  month: 'numeric',
-                  day: 'numeric',
-                  hour: '2-digit',
-                  minute: '2-digit'
-                }
-              )
-            span= formattedDate
+        include ../includes/footer.pug
     div
       div.min-h-screen.fixed(class="w-4/6")
         div.h-screen.flex.justify-center.items-center
